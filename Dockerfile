@@ -1,6 +1,6 @@
 #etapa 1 Build
 FROM gradle:9.2.1-jdk21 AS build
-COPY --chowm=gradle:gradle . /app
+COPY --chown=gradle:gradle . /app
 WORKDIR /app
 RUN gradle bootjar --no-daemon
 
